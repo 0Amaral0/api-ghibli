@@ -2,16 +2,18 @@ package com.example.api_ghibli;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private CardView F1, F2, F3, F4, F5, F6;
+    public static List<PostFilme> listaFilmes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,19 +34,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         F5.setOnClickListener((View.OnClickListener) this);
         F6.setOnClickListener((View.OnClickListener) this);
 
-        /*RecyclerView recyclerView = findViewById(R.id.recycler_filmes);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        DataFilmes[] dataFilmes = new DataFilmes[]{
-                new DataFilmes("Spirited Away", "2001", R.drawable.ic_launcher_background),
-                new DataFilmes("Spirited Away", "2001", R.drawable.ic_launcher_background),
-                new DataFilmes("Spirited Away", "2001", R.drawable.ic_launcher_background),
-                new DataFilmes("Spirited Away", "2001", R.drawable.ic_launcher_background),
-        };
-
-        AdapterFilmes adapterFilmes = new AdapterFilmes(dataFilmes, MainActivity.this);
-        recyclerView.setAdapter(adapterFilmes);*/
     }
 
     @Override
