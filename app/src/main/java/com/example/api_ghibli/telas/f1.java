@@ -1,4 +1,4 @@
-package com.example.api_ghibli;
+package com.example.api_ghibli.telas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,9 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.api_ghibli.PostFilme;
+import com.example.api_ghibli.R;
+import com.example.api_ghibli.StudioGhibliAPI;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -19,7 +22,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class f1 extends AppCompatActivity {
-    private ImageView poster;
+    private ImageView posterFilm;
     private TextView titulo, titulo_japones, diretor, dataLancamento, sinopse;
 
     @Override
@@ -27,7 +30,7 @@ public class f1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f1);
 
-        poster = findViewById(R.id.imgPoster);
+        posterFilm = findViewById(R.id.imgPoster);
         titulo = findViewById(R.id.txtTitulo);
         titulo_japones = findViewById(R.id.txtTituloJapan);
         diretor = findViewById(R.id.txtDiretor);
@@ -56,7 +59,9 @@ public class f1 extends AppCompatActivity {
 
                 for (PostFilme postFilme : postFilmes) {
                     //Pega o poster
-                    Picasso.get().load("https://image.tmdb.org/t/p/w600_and_h900_bestv2/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg").into(poster);
+                    String image = "";
+                    image = postFilme.getImage();
+                    Picasso.get().load(image).into(posterFilm);
 
                     //Pega o título na API
                     String title = "";

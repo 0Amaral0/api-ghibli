@@ -4,9 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.api_ghibli.telas.f1;
+import com.example.api_ghibli.telas.f2;
+import com.example.api_ghibli.telas.f3;
+import com.example.api_ghibli.telas.f4;
+import com.example.api_ghibli.telas.f5;
+import com.example.api_ghibli.telas.f6;
 
 import java.util.List;
 

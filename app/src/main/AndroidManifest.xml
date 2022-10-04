@@ -14,42 +14,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.API_Ghibli">
         <activity
-            android:name=".f6"
+            android:name=".telas.f6"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".f5"
+            android:name=".telas.f5"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".f4"
+            android:name=".telas.f4"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".f3"
+            android:name=".telas.f3"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".f2"
+            android:name=".telas.f2"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".f1"
+            android:name=".telas.f1"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".f1">
+    tools:context=".telas.f1">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -96,7 +96,8 @@
                 android:text="@string/placeholder_sinopse"
                 android:textSize="18sp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:justificationMode="inter_word"/>
 
             <TextView
                 android:id="@+id/characters"

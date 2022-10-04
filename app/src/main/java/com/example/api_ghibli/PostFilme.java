@@ -2,6 +2,7 @@ package com.example.api_ghibli;
 
 public class PostFilme {
     private String id;
+    private String image;
     private String title;
     private String original_title_romanised;
     private String director;
@@ -10,6 +11,10 @@ public class PostFilme {
 
     public String getId() {
         return id;
+    }
+
+    public String getImage() {
+        return image;
     }
 
     public String getTitle() {
