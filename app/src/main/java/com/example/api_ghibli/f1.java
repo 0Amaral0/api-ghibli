@@ -8,6 +8,8 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -39,7 +41,7 @@ public class f1 extends AppCompatActivity {
 
         StudioGhibliAPI studioGhibliAPI = retrofit.create(StudioGhibliAPI.class);
 
-        Call<List<PostFilme>> call = studioGhibliAPI.getPosts();
+        Call<List<PostFilme>> call = studioGhibliAPI.getPosts("dc2e6bd1-8156-4886-adff-b39e6043af0c");
 
         call.enqueue(new Callback<List<PostFilme>>() {
 
@@ -53,15 +55,32 @@ public class f1 extends AppCompatActivity {
                 List<PostFilme> postFilmes = response.body();
 
                 for (PostFilme postFilme : postFilmes) {
-                    //Pegar o título na API
+                    //Pega o poster
+                    Picasso.get().load("https://image.tmdb.org/t/p/w600_and_h900_bestv2/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg").into(poster);
+
+                    //Pega o título na API
                     String title = "";
-                    title += postFilme.getTitle();
+                    title = postFilme.getTitle();
                     titulo.setText(title);
 
-                    //Pegar a sinopse na API
-                    String description = "";
-                    description += postFilme.getDescription();
+                    //Pega o título em japonês na API
+                    String originalTitleRomanised = "";
+                    originalTitleRomanised = postFilme.getOriginal_title_romanised();
+                    titulo_japones.setText(originalTitleRomanised);
 
+                    //Pega o nome do diretor na API
+                    String director = "";
+                    director = postFilme.getDirector();
+                    diretor.setText(director);
+
+                    //Pega a data de lançamento
+                    String releaseDate = "";
+                    releaseDate = postFilme.getRelease_date();
+                    dataLancamento.setText(releaseDate);
+
+                    //Pega a sinopse na API
+                    String description = "";
+                    description = postFilme.getDescription();
                     sinopse.setText(description);
                 }
             }
