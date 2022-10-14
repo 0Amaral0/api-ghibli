@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         F5 = (CardView) findViewById(R.id.f5);
         F6 = (CardView) findViewById(R.id.f6);
 
+
         F1.setOnClickListener((View.OnClickListener) this);
         F2.setOnClickListener((View.OnClickListener) this);
         F3.setOnClickListener((View.OnClickListener) this);
         F4.setOnClickListener((View.OnClickListener) this);
         F5.setOnClickListener((View.OnClickListener) this);
         F6.setOnClickListener((View.OnClickListener) this);
-
     }
 
     @Override
@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 i = new Intent(this, f6.class);
                 startActivity(i);
                 break;
-
         }
     }
 }
