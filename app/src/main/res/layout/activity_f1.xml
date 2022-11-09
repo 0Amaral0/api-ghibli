@@ -151,7 +151,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nome"
+                            android:text="Chihiro Ogino"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textAlignment="center"
@@ -180,12 +180,12 @@
                             android:layout_width="130dp"
                             android:layout_height="200dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/chihiro"/>
+                            android:src="@drawable/haku"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nome"
+                            android:text="Haku"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textAlignment="center"
@@ -214,12 +214,12 @@
                             android:layout_width="130dp"
                             android:layout_height="200dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/chihiro"/>
+                            android:src="@drawable/no_face_kaonashi"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nome"
+                            android:text="Kaonashi"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textAlignment="center"
@@ -248,12 +248,12 @@
                             android:layout_width="130dp"
                             android:layout_height="200dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/chihiro"/>
+                            android:src="@drawable/yubaba"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nome"
+                            android:text="Yubaba"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textAlignment="center"

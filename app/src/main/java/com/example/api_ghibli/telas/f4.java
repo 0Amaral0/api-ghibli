@@ -27,7 +27,7 @@ public class f4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_f1);
+        setContentView(R.layout.activity_f4);
 
         posterFilm = findViewById(R.id.imgPoster);
         titulo = findViewById(R.id.txtTitulo);

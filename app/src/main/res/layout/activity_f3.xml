@@ -146,12 +146,12 @@
                             android:layout_width="130dp"
                             android:layout_height="200dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/chihiro"/>
+                            android:src="@drawable/haru_yoshioka"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nome"
+                            android:text="Haru Yoshioka"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textAlignment="center"
@@ -180,12 +180,12 @@
                             android:layout_width="130dp"
                             android:layout_height="200dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/chihiro"/>
+                            android:src="@drawable/the_baron"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nome"
+                            android:text="The Baron"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textAlignment="center"
@@ -214,46 +214,12 @@
                             android:layout_width="130dp"
                             android:layout_height="200dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/chihiro"/>
+                            android:src="@drawable/renaldo_moon"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nome"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:textAlignment="center"
-                            android:textSize="16sp"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/char4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    app:cardMaxElevation="8dp"
-                    app:cardCornerRadius="5dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="15dp"
-                        android:orientation="vertical"
-                        android:background="@color/background_blue">
-
-                        <ImageView
-                            android:layout_width="130dp"
-                            android:layout_height="200dp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/chihiro"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Nome"
+                            android:text="Renaldo Moon"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textAlignment="center"
