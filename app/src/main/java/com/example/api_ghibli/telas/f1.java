@@ -2,6 +2,7 @@ package com.example.api_ghibli.telas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
@@ -36,6 +37,12 @@ public class f1 extends AppCompatActivity {
         diretor = findViewById(R.id.txtDiretor);
         dataLancamento = findViewById(R.id.txtData);
         sinopse = findViewById(R.id.txtSinopse);
+
+        Intent intent = getIntent();
+
+        for (intent.getExtras() != null){
+
+        }
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://ghibliapi.herokuapp.com/")
