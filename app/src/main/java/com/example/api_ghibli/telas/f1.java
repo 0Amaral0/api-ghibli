@@ -38,12 +38,6 @@ public class f1 extends AppCompatActivity {
         dataLancamento = findViewById(R.id.txtData);
         sinopse = findViewById(R.id.txtSinopse);
 
-        Intent intent = getIntent();
-
-        for (intent.getExtras() != null){
-
-        }
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://ghibliapi.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create())

@@ -1,14 +1,10 @@
 package com.example.api_ghibli;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,7 +26,6 @@ import com.example.api_ghibli.telas.f6;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -75,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < titulo.length; i++){
             ItemsModel itemsModel = new ItemsModel(titulo[i], dataLancamento[i], poster[i]);
             itemsList.add(itemsModel);
-            //Log.e("TAG", "new text ==> " + titulo[i]);
         }
 
         customAdapter = new CustomAdapter(itemsList, this);
@@ -114,13 +108,40 @@ public class MainActivity extends AppCompatActivity {
 
             View view = getLayoutInflater().inflate(R.layout.row_items, null);
 
-            TextView tvTitulo = view.findViewById(R.id.textViewTitulo);
-            TextView tvDataLanc = view.findViewById(R.id.textViewDataLanc);
-            ImageView imageView = view.findViewById(R.id.imageViewPoster);
+            TextView tvTitulo = view.findViewById(R.id.tvTitulo);
+            TextView tvDataLanc = view.findViewById(R.id.tvDataLanc);
+            ImageView imageView = view.findViewById(R.id.ivPoster);
 
             tvTitulo.setText(itemsModelListFiltro.get(position).getTitulo());
             tvDataLanc.setText(itemsModelListFiltro.get(position).getDataLancamento());
             imageView.setImageResource(itemsModelListFiltro.get(position).getPoster());
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    switch (itemsModelListFiltro.get(position).getTitulo()){
+                        case "Spirited Away":
+                            startActivity(new Intent(MainActivity.this, f1.class));
+                            break;
+                        case "Howl's Moving Castle":
+                            startActivity(new Intent(MainActivity.this, f2.class));
+                            break;
+                        case "The Cat Returns":
+                            startActivity(new Intent(MainActivity.this, f3.class));
+                            break;
+                        case "Princess Mononoke":
+                            startActivity(new Intent(MainActivity.this, f4.class));
+                            break;
+                        case "Kiki's Delivery Service":
+                            startActivity(new Intent(MainActivity.this, f5.class));
+                            break;
+                        case "My Neighbor Totoro":
+                            startActivity(new Intent(MainActivity.this, f6.class));
+                            break;
+                    }
+                }
+            });
 
             return view;
         }
@@ -181,7 +202,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                Log.e("TAG", "new text ==> " + newText);
                 customAdapter.getFilter().filter(newText);
                 return true;
             }
@@ -200,6 +220,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }
